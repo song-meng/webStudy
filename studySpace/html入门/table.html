@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 表格标签 -->
+	<table border="1" cellspacing="0" cellpadding="5" width="500">
+		<caption>演员表</caption>
+		<!-- thead 是表格头部 -->
+		<!-- tr是行标签 -->
+		<thead>
+			<tr>
+			<!-- td是单元格标签 -->
+			<th>姓名</th>
+			<th>性别</th>
+			<th>年龄</th>
+			<th>省份</th>
+		</tr>
+		</thead>
+
+		<tbody>
+			<!-- rowspan 行合并，从合并的第一行设置 -->
+		<tr>
+			<!-- td是单元格标签 -->
+			<td>刘德华</td>
+			<td>男</td>
+			<td>60</td>
+			<td rowspan="3">香港</td>
+		</tr>
+		<tr>
+			<!-- td是单元格标签 -->
+			<td>张学友</td>
+			<td>男</td>
+			<td>61</td>
+		</tr>
+		<tr>
+			<!-- td是单元格标签 -->
+			<td>张学友</td>
+			<td>男</td>
+			<td>61</td>
+
+		</tr>
+		<tr>
+			<!-- td是单元格标签 -->
+			<td>张宇</td>
+			<td>男</td>
+			<!-- colspan 列合并 -->
+			<td colspan="2">59</td>
+		</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>

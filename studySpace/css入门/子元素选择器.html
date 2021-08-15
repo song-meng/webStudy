@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /*后代选择器法*/
+        /* ul li { 
+            color: red;
+        } */
+        li {
+            color: black;
+        }
+
+        .item>li>ul>li {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    子元素选择器 “子”指的的亲儿子
+
+    要求：
+    1、一级菜单颜色为红色，二级颜色不变
+    <ul class="item">
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+        <li>一级菜单
+            <ul>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

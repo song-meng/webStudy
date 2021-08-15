@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css初始化 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        /* 清除浮动 */
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: '';
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        .clerfix {
+            *zoom: 1;
+        }
+
+
+        a {
+            color: #050505;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0px auto;
+        }
+
+        body {
+            background-color: #f3f4f5
+        }
+
+        header {
+            height: 100px;
+            overflow: hidden;
+        }
+
+        /* 在input固定宽度情况下设置padding之后，整个input元素会根据
+         元素的实际宽度=width+border+padding 重新生成宽度，
+         需要设置以下属性来讲input的宽度固定为box的宽度 */
+        input {
+            box-sizing: border-box;
+            /* 其他浏览器 */
+            -webkit-box-sizing: border-box;
+            /* 谷歌 */
+            -moz-box-sizing: border-box;
+            /* 火狐 */
+        }
+
+        nav {
+            width: 1366px;
+            height: 42px;
+            margin: 26px auto;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .navbar {
+            float: left;
+            line-height: 42px;
+            /* 这个行高给父级 */
+            height: 42px;
+            margin-left: 50px;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            padding: 0 8px;
+            /* 上下左右 */
+            /* border-bottom: 1px solid red; */
+            display: block;
+            /* a 是行内元素 给高需要转换块级 */
+            height: 42px;
+        }
+
+        .navbar li a:hover {
+            border-bottom: 2px solid #00a4ff;
+        }
+
+        .search {
+            width: 410px;
+            /* 360 + 50 */
+            height: 38px;
+            border: 1px solid #00a4ff;
+            float: left;
+        }
+
+        .search input[type=text] {
+            background-color: pink;
+            width: 360px;
+            height: 38px;
+            float: left;
+            border-style: none;
+            padding-left: 20px;
+        }
+
+        .search input[type=submit] {
+            width: 50px;
+            height: 38px;
+            background: #00a4ff url(./images/search_06.png) center center no-repeat;
+            float: left;
+            border-style: none;
+        }
+
+        .banner {
+            height: 420px;
+            background-color: #1c036c;
+        }
+
+        .banner-in {
+            height: 420px;
+            background: url(./images/banner_03.png);
+        }
+
+        .slidebar {
+            height: 420px;
+            width: 190px;
+            background: rgba(0, 0, 0, 0.4);
+            float: left;
+        }
+
+        .slidebar li a {
+            color: #fff;
+            font-size: 14px;
+            padding: 0 20px;
+            /* a 是行内元素，没有大小，需要转换 */
+            display: block;
+            /* display: 45px; */
+            line-height: 45px;
+        }
+
+        .slidebar a span {
+            float: right;
+            font-family: Arial;
+        }
+
+        .slidebar li a:hover {
+            color: #00a4ff;
+        }
+
+        .timetable {
+            float: right;
+            width: 230px;
+            height: 300px;
+            background-color: pink;
+            margin-top: 50px;
+        }
+
+        .timetable dt {
+            height: 50px;
+            text-align: center;
+            background-color: #9bceea;
+            line-height: 50px;
+            color: white;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="请输入关键词">
+                    <input type="submit" value="">
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- banner -->
+    <div class="banner">
+        <div class="banner-in container">
+            <!-- 左侧表 -->
+            <div class="slidebar">
+                <ul>
+                    <li><a href="#">前段开发 <span>></span></a></li>
+                    <li><a href="#">后端开发 <span>></span></a></li>
+                    <li><a href="#">移动开发 <span>></span></a></li>
+                    <li><a href="#">人工智能 <span>></span></a></li>
+                    <li><a href="#">商业预测 <span>></span></a></li>
+                    <li><a href="#">云计算&大数据 <span>></span></a></li>
+                    <li><a href="#">运维&测试 <span>></span></a></li>
+                    <li><a href="#">UI设计 <span>></span></a></li>
+                    <li><a href="#">产品 <span>></span></a></li>
+                </ul>
+            </div>
+            <dl class="timetable">
+                <dt>我的课表</dt>
+                <dd></dd>
+                <dd></dd>
+                <dd></dd>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 课表 -->
+
+</body>
+
+</html>
