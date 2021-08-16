@@ -165,7 +165,7 @@
             float: right;
             width: 230px;
             height: 300px;
-            background-color: pink;
+            background-color: white;
             margin-top: 50px;
         }
 
@@ -177,6 +177,76 @@
             color: white;
             font-weight: 500;
             letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .timetable dd {
+            width: 193px;
+            height: 60px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ccc;
+            padding-top: 12px;
+            box-sizing: border-box;
+        }
+
+        .timetable dd h4 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #4e434e;
+        }
+
+        .timetable dd p {
+            font-size: 14px;
+            font-weight: normal;
+            color: #a5a5a5;
+        }
+
+        .timetable dd:last-child {
+            /* 伪类选择器 */
+            border-bottom: 0px;
+        }
+
+        .timetable dd a {
+            height: 38px;
+            border: 1px solid #00a4ff;
+            line-height: 38px;
+            display: block;
+            color: #00a4ff;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .timetable dd a:hover {
+            background-color: #00a4ff;
+            color: white;
+        }
+
+        .recommend {
+            height: 60px;
+            line-height: 60px;
+            background-color: #fff;
+            margin-top: 8px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .recommend a {
+            padding: 0 30px;
+            border-right: 1px solid #ccc;
+        }
+
+        .recommend a:hover {
+            color: #00a4ff;
+        }
+
+        .recommend a:first-child {
+            color: #00a4ff;
+        }
+
+        .recommend a:last-child {
+            border-right: 0px;
+            color: #00a4ff;
+            float: right;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -221,14 +291,34 @@
             </div>
             <dl class="timetable">
                 <dt>我的课表</dt>
-                <dd></dd>
-                <dd></dd>
-                <dd></dd>
-                <dd></dd>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象 </p>
+                </dd>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象 </p>
+                </dd>
+                <dd>
+                    <h4>继续学习 程序语言设计</h4>
+                    <p>正在学习-使用对象 </p>
+                </dd>
+                <dd>
+                    <a href="#">全部课程</a>
+                </dd>
             </dl>
         </div>
     </div>
-
+    <div class="recommend container">
+        <a href="">精品推荐</a>
+        <a href="">jquery</a>
+        <a href="">spart</a>
+        <a href="">MySql</a>
+        <a href="">JavaWeb</a>
+        <a href="">MySql</a>
+        <a href="">JavaWeb</a>
+        <a href="">修改兴趣</a>
+    </div>
     <!-- 课表 -->
 
 </body>
